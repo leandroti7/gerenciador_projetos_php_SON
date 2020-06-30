@@ -1,0 +1,22 @@
+{
+    "name": "leandroti7/framework",
+    "authors": [
+        {
+            "name": "leandro souza",
+            "email": "leandro.dasilvati7@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SON\\Framework\\": "src",
+            "App\\": "app"
+        }
+    },
+    "scripts": {
+        "server": "php -S localhost:8080 -t public"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
