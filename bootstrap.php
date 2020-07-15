@@ -10,7 +10,15 @@ new App\Module;
 
 
 try {
-    echo $router->run();
+    $result = $router->run();
+
+    $response = new SON\Framework\Response;
+    $params = [
+        'container' => $container,
+        'params' => $result['params'],
+    ];
+    $response($result['action'],$params);
+
 } catch (\SON\Framework\Exceptions\HttpException $e) {
     echo  json_encode(['error' => $e->getMessage()]);
 }
