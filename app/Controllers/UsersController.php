@@ -9,8 +9,8 @@ class UsersController
     public function show($container, $request)
     {
         $user = new Users($container);
-        $data = $user->get($request->attributes->get(1));
+        $user->create(['name' => 'Leandro']);
+        return $data = $user->get($request->attributes->get(1));
 
-        return 'Meu nome é : ' . $data['name'];
     }
 }
